@@ -58,9 +58,9 @@ export default function NavPath ({value})   {
         </div>
     </div>
       </div>
-      <div className='flex justify-center gap-4'>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
         
-      <div className='w-[32%]  flex flex-col gap-4'>
+      <div className='w-[100%]  flex flex-col gap-4'>
         {
           img_1?.map((item, index)=>(
             <div key={index} className='flex flex-col gap-4 relative'>
@@ -75,7 +75,7 @@ export default function NavPath ({value})   {
           ))
         }
         </div>
-        <div className='w-[32%]  flex flex-col gap-4'>
+        <div className='w-[100%]  flex flex-col gap-4'>
         {
           img_2?.map((item, index)=>(
             <div key={index} className='flex flex-col gap-4 relative'>
@@ -90,7 +90,7 @@ export default function NavPath ({value})   {
           ))
         }
         </div>
-        <div className='w-[32%]  flex flex-col gap-4'>
+        <div className='w-[100%]  flex flex-col gap-4'>
         {
           img_3?.map((item, index)=>(
             <div key={index} className='flex flex-col gap-4 relative '>

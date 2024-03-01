@@ -40,10 +40,11 @@ export default function Image() {
     navigate("/");
   };
   return (
-    <div className=" px-[20px] ">
-      <div className="flex">
-        <div>
-          <div className="h-[280px] pt-[56px] flex items-end justify-between">
+    <div className=" px-[20px] w-[100vw] ">
+      <div className="flex   items-end gap-[20px] pb-[56px] justify-between   ">
+
+        <div className="w-[55%]">
+          <div className="h-[280px] py-[56px] flex items-end justify-between">
             <div className=" max-w-[480px] px-4 ">
               <h1 className=" font-bold text-[40px]">Unsplash</h1>
               <p className="text-[18px]">The internet's source for visuals.</p>
@@ -53,8 +54,8 @@ export default function Image() {
               Supported by Squarespace
             </Link>
           </div>
-          <div className="max-w-[620px]">
-            <div className="bg-[#eee] flex  rounded-[5px] items-center px-[12px] w-[100%]  md:w-[100%] justify-between mx-[16px] ">
+          <div className=" ">
+            <div className="bg-[#eee] flex  rounded-[5px] h-[54px] items-center px-[12px] w-[100%]  md:w-[100%] justify-between mx-[16px] ">
               <form
                 className="flex items-center w-[100%] "
                 onSubmit={handleSearch}
@@ -77,21 +78,71 @@ export default function Image() {
             </div>
           </div>
         </div>
-        <div className="h-[280px] w-[280px]  border p-[20px] flex flex-col justify-between">
+    
+        <div className="h-[280px] w-[280px]  border p-[20px]  flex-col justify-between rounded-md hidden lg:flex ">
           <div className="flex flex-wrap gap-2">
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/marvel'>Mavrel</Link>
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/apple-pay'>Apple Pay</Link>
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/japan'>Japan</Link>
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/christchurch'>Christchurch</Link>
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/cityscape'>Cityscape</Link>
-            <Link className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  " to='https://unsplash.com/s/photos/christmass'>Christmass</Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/marvel"
+            >
+              Mavrel
+            </Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/apple-pay"
+            >
+              Apple Pay
+            </Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/japan"
+            >
+              Japan
+            </Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/christchurch"
+            >
+              Christchurch
+            </Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/cityscape"
+            >
+              Cityscape
+            </Link>
+            <Link
+              className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
+              to="https://unsplash.com/s/photos/christmass"
+            >
+              Christmass
+            </Link>
           </div>
-          <div className="flex items-center gap-3"><IoTrendingUp/><Link to='https://unsplash.com/trends'>See trending searches</Link></div>
+          <div className="flex items-center gap-3">
+            <IoTrendingUp />
+            <Link to="https://unsplash.com/trends">See trending searches</Link>
+          </div>
         </div>
-        <div className="h-[280px] w-[280px]"></div>
+        <div className="h-[280px] w-[280px]  border  flex flex-col justify-between rounded-md  ">
+          <div className="flex overflow-x-scroll scrollbar-hide relative">
+            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-017.jpg?dpr=1&h=280&w=280&auto=format&fit=crop&q=60" alt="" />
+            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-018.jpg?dpr=1&h=280&w=280&auto=format&fit=crop&q=60" alt="" />
+            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-004.jpg?dpr=1&h=280&w=280&crop=focalpoint&fp-x=0&fp-y=0.4&q=80&auto=format&fit=crop" alt="" />
+          </div>
+          <div className=" absolute p-[20px] flex flex-col  justify-end h-[280px] w-[280px]">
+            <h1 className="text-white text-[12px] font-bold">Discover Unsplash+</h1>
+            <p className=" text-white font-bold text-[18px]">
+            Unlimited downloads.
+            <br />
+            Full legal protections.
+            <br />
+            No ads.
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="flex justify-center gap-4">
-        <div className="w-[32%]  flex flex-col gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="w-[100%]  flex flex-col gap-4">
           {img_1?.map((item, index) => (
             <div key={index} className="flex flex-col gap-4 relative">
               <img src={item?.urls?.full} alt="" className=" bg-cover w-full" />
@@ -134,7 +185,7 @@ export default function Image() {
             </div>
           ))}
         </div>
-        <div className="w-[32%]  flex flex-col gap-4">
+        <div className="w-[100%]  flex flex-col gap-4">
           {img_2?.map((item, index) => (
             <div key={index} className="flex flex-col gap-4 relative">
               <img src={item?.urls?.full} alt="" className=" bg-cover w-full" />
@@ -177,7 +228,7 @@ export default function Image() {
             </div>
           ))}
         </div>
-        <div className="w-[32%]  flex flex-col gap-4">
+        <div className="w-[100%]  flex flex-col gap-4">
           {img_3?.map((item, index) => (
             <div key={index} className="flex flex-col gap-4 relative ">
               <img

@@ -2,6 +2,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import React, { useState } from "react";
 import useImageStore from "../api/ImageLink";
+import { FcLeft, FcRight } from "react-icons/fc";
 
 export default function NavFooter({value, path}) {
   const {image, getImg} = useImageStore()
@@ -142,17 +143,24 @@ export default function NavFooter({value, path}) {
     sessionStorage.setItem('local',item?.pathName)
     
   }
-  
- 
+  let leng = value.length
+  console.log(leng)
+  const [count, setCount]=useState(0)
+ const prev = ()=>{
+  setCount((count)=>(count === 0 ? value.length - 1 : count - 1))
+ }
+ const next = ()=>{
+  setCount((count)=>(count ===  value.length - 1 ? 0 : count + 1))
+ }
   return (
-      <div className=" text-[#767676]  text-[14px] flex gap-4 overflow-x-scroll items-center  lg:overflow-hidden px-[40px] bg-[#fff] w-[100vw] box-border h-[56px]">
+      <div  className=" text-[#767676]  text-[14px] flex gap-4 overflow-x-scroll items-center  lg:overflow-hidden transition-transform ease-out duration-500 px-[40px] bg-[#fff] w-[100vw] box-border h-[56px]">
        <div className="flex  items-center">
        <Link to='/'  className="cursor-pointer hover:text-black">Editorial</Link>
         <p className="cursor-pointer hover:text-black mx-4">Following</p>
         <p className="cursor-pointer hover:text-black">Unsplash+</p>
        </div>
         <div className="w-[1px] h-[32px] bg-[#767676] md:block hidden  "></div>
-        <div className="md:overflow-x-scroll w-[100%] items-center flex  gap-[55px]  scrollbar-hide ">
+        <div  className="md:overflow-x-scroll w-[100%] items-center flex  gap-[55px]  scrollbar-hide ">
         {
           value.map((item, index)=>(
               <Link to='/page' key={item.id} className="hover:text-black w-[100px] whitespace-nowrap cursor-pointer " onClick={(e)=>handlePage(item)} >
@@ -161,8 +169,12 @@ export default function NavFooter({value, path}) {
               
             ))
            }
-         
+         <div>
+          <FcLeft/>
+          <FcRight/>
+         </div>
         </div>
       </div>
   );
 }
+
