@@ -14,7 +14,6 @@ export default function Image() {
   const img_2 = image.splice(0, 10);
   const img_3 = image.splice(0, 10);
   const [active, setactive] = useState(false);
-
   const downloadImage = (item) => {
     const imageUrl = item.urls.raw;
     fetch(imageUrl)
@@ -42,7 +41,6 @@ export default function Image() {
   return (
     <div className=" px-[20px] w-[100vw] ">
       <div className="  ">
-
         <div className="md:flex hidden     items-end gap-[20px] pb-[56px] justify-between ">
         <div className="w-[55%] ">
           <div className="h-[280px] py-[56px] flex items-end justify-between">
@@ -141,9 +139,8 @@ export default function Image() {
           </div>
         </div>
        </div>
-       {/* hiddin */}
-       <div className="md:hidden  flex overflow-auto   w-[100%]  gap-4 ">
-       <div className="h-[168px] w-[310px]  border p-[20px]  flex-col justify-between rounded-md  ">
+       <div className="md:hidden  flex    w-[100%]  gap-4 ">
+       <div className=" w-[98vw]  border p-[20px]  flex-col justify-between rounded-md  ">
           <div className="flex flex-wrap gap-1 w-[290px]">
             <Link
               className="border hover:border-black text-[#767676] hover:text-black px-[8px] py-[4px] rounded  "
@@ -187,26 +184,8 @@ export default function Image() {
             <Link to="https://unsplash.com/trends">See trending searches</Link>
           </div>
         </div>
-        <div className="h-[168px] w-[310px]  border overflow-x-scroll scrollbar-hide  flex flex-col justify-between rounded-md  ">
-          <div className="flex overflow-x-scroll scrollbar-hide relative w-[310px]">
-            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-017.jpg?dpr=1&h=280&w=280&auto=format&fit=crop&q=60" alt="" />
-            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-018.jpg?dpr=1&h=280&w=280&auto=format&fit=crop&q=60" alt="" />
-            <img src="https://unsplash-assets.imgix.net/unsplashplus/asset-plus-004.jpg?dpr=1&h=280&w=280&crop=focalpoint&fp-x=0&fp-y=0.4&q=80&auto=format&fit=crop" alt="" />
-          </div>
-          <div className=" absolute p-[20px] flex flex-col  justify-end h-[168px] w-[50%]">
-            <h1 className="text-white text-[12px] font-bold">Discover Unsplash+</h1>
-            <p className=" text-white font-bold text-[18px]">
-            Unlimited downloads.
-            <br />
-            Full legal protections.
-            <br />
-            No ads.
-            </p>
-          </div>
-        </div>
        </div>
       </div>
-      {/* img */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="w-[100%]  flex flex-col gap-4">
           {img_1?.map((item, index) => (

@@ -23,7 +23,6 @@ export default function NavPath ({value})   {
         console.log(true)
         console.log(false)
       }
-      
     }
   }
   const downloadImage =(item)=> {

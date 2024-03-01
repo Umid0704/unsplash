@@ -153,7 +153,7 @@ export default function NavFooter({value, path}) {
   setCount((count)=>(count ===  value.length - 1 ? 0 : count + 1))
  }
   return (
-      <div  className=" text-[#767676]  text-[14px] flex gap-4 overflow-x-scroll items-center  lg:overflow-hidden transition-transform ease-out duration-500 px-[40px] bg-[#fff] w-[100vw] box-border h-[56px]">
+      <div  className=" text-[#767676]  text-[14px] flex gap-4 overflow-x-scroll scrollbar-hide items-center  lg:overflow-hidden transition-transform ease-out duration-500 px-[40px] bg-[#fff] w-[100vw] box-border h-[56px]">
        <div className="flex  items-center">
        <Link to='/'  className="cursor-pointer hover:text-black">Editorial</Link>
         <p className="cursor-pointer hover:text-black mx-4">Following</p>

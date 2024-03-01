@@ -25,7 +25,6 @@ export default function Navbar() {
         setOpenBarsMenu(true)
       }else{
         setOpenBarsMenu(false)
-
       }
  }
  const openuserModel=()=>{
@@ -33,7 +32,6 @@ export default function Navbar() {
         setOpenUserMenu(true)
       }else{
         setOpenUserMenu(false)
-
       }
  }
  const handleSearch=(e)=>{
@@ -61,7 +59,6 @@ navigate('/')
         <span className='hover:text-black  hover:cursor-pointer'>Advertise</span>
         <span className='hover:text-black  hover:cursor-pointer'>Blog</span>
         <span className=' hover:delay-150   text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-500 hover:cursor-pointer hover:to-pink-500 bg-gradient-to-r from-purple-800 to-blue-500 '>Unsplash+</span>
-
        </div>
       <div>
    <div className=' relative'>
